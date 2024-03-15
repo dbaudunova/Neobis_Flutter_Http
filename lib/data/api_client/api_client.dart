@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import '../model/post_model.dart';
+import 'package:neobis_flutter_http/data/model/post_model.dart';
 
 class ApiClient {
   Future<List<PostModel>> getPosts() async {

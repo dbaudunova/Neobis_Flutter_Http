@@ -11,17 +11,21 @@ class ListStyle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        title,
-        style: const TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 20,
+    return Material(
+      borderRadius: BorderRadius.circular(16.0),
+      color: Colors.blue[100],
+      child: ListTile(
+        title: Text(
+          title,
+          style: const TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
         ),
-      ),
-      subtitle: Text(
-        subtitle,
-        style: const TextStyle(fontSize: 16),
+        subtitle: Text(
+          subtitle,
+          style: const TextStyle(fontSize: 16),
+        ),
       ),
     );
   }

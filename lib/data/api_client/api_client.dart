@@ -7,12 +7,9 @@ class ApiClient {
     final uri = Uri.parse('https://jsonplaceholder.typicode.com/posts');
     final response = await http.get(uri);
 
-    if(response.statusCode == 200) {
-      final List<dynamic> responseData = jsonDecode(response.body);
-      final List<PostModel> posts = responseData.map((e) => PostModel.fromJson(e)).toList();
-      return posts;
-    } else {
-      throw Exception('Failed to load');
-    }
+    final List<dynamic> responseData = jsonDecode(response.body);
+    final List<PostModel> posts =
+        responseData.map((e) => PostModel.fromJson(e)).toList();
+    return posts;
   }
 }
